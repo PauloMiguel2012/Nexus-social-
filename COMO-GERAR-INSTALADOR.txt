@@ -1,0 +1,23 @@
+NEXUS SOCIAL — INSTALADOR WINDOWS
+
+Este projeto empacota a versão web atual do Nexus em um aplicativo desktop Electron e configura um instalador NSIS com atalhos no Menu Iniciar e na Área de Trabalho.
+
+IMPORTANTE:
+- O arquivo EXE ainda não está compilado neste ZIP.
+- A compilação está configurada para rodar nos servidores Windows do GitHub Actions, para não depender do notebook.
+- O aplicativo atual continua sendo um protótipo local: os dados ficam no navegador/perfil local. Isso não cria sincronização entre usuários nem chamadas de voz reais.
+
+COMO GERAR O EXE PELO GITHUB:
+1. Entre em github.com e crie um repositório chamado nexus-social.
+2. Envie TODOS os arquivos e pastas deste ZIP para o repositório (incluindo a pasta .github).
+3. Abra a aba Actions do repositório.
+4. Se necessário, habilite GitHub Actions.
+5. Escolha “Build Nexus Social for Windows” e toque em “Run workflow”.
+6. Quando terminar com sucesso, abra a execução e baixe o artefato “NexusSetup-Windows”.
+7. Dentro dele estará NexusSetup-1.0.0.exe.
+
+PARA TESTAR LOCALMENTE EM WINDOWS COM NODE.JS:
+  npm install
+  npm run dist
+
+O EXE gerado poderá então ser colocado no diretório público /downloads/ do site. O botão do site deve apontar para /downloads/NexusSetup-1.0.0.exe (ou para um nome fixo NexusSetup.exe, se renomeado).
